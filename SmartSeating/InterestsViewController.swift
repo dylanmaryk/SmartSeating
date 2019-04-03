@@ -129,6 +129,11 @@ class InterestsViewController: UIViewController {
     private var interestsResponse: InterestsResponse?
     
     private func request() {
+        guard interest1Label.text != "define an interest",
+            interest2Label.text != "define an interest",
+            interest3Label.text != "define an interest" else {
+                return
+        }
         let interestsRequest = InterestsRequest(interests: [interest1Label.text!,
                                                             interest2Label.text!,
                                                             interest3Label.text!])
