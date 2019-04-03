@@ -14,6 +14,14 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.8.3):
     - PromiseKit/CorePromise
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxGesture (2.1.0):
+    - RxCocoa (~> 4.4.0)
+    - RxSwift (~> 4.4.0)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -21,6 +29,7 @@ DEPENDENCIES:
   - Gradients
   - PromiseKit
   - PromiseKit/Alamofire
+  - RxGesture
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -28,13 +37,21 @@ SPEC REPOS:
     - DropDown
     - Gradients
     - PromiseKit
+    - RxAtomic
+    - RxCocoa
+    - RxGesture
+    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
   Gradients: 9c94ae3dfda450f1ccbb38126dde5f5b9736043c
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: 08d4b5f8b04bbb2ccf9ab5c2da249f2253be24d4
+PODFILE CHECKSUM: 0dce1079ccf92a72529d10204d35c2b76849b10c
 
 COCOAPODS: 1.5.3

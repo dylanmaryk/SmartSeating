@@ -13,7 +13,11 @@ class YourSeatViewController: UIViewController {
     
     @IBOutlet private weak var getYourTicketButton: UIButton!
     
-    var interestsResponse: InterestsResponse?
+    var interestsResponse: InterestsResponse? {
+        didSet {
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

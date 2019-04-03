@@ -8,5 +8,6 @@ target 'SmartSeating' do
   pod 'Gradients'
   pod 'PromiseKit'
   pod 'PromiseKit/Alamofire'
+  pod 'RxGesture'
 
 end
