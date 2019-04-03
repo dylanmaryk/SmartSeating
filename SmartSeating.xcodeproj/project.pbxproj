@@ -12,6 +12,10 @@
 		3553F47E2254BCD70044BE94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3553F47C2254BCD70044BE94 /* Main.storyboard */; };
 		3553F4802254BCD90044BE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3553F47F2254BCD90044BE94 /* Assets.xcassets */; };
 		3553F4832254BCD90044BE94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3553F4812254BCD90044BE94 /* LaunchScreen.storyboard */; };
+		3553F48D2254D9630044BE94 /* YourSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553F48C2254D9630044BE94 /* YourSeatViewController.swift */; };
+		3553F48F2254DD6C0044BE94 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553F48E2254DD6C0044BE94 /* SplashScreenViewController.swift */; };
+		3553F4912254F17D0044BE94 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553F4902254F17D0044BE94 /* InterestsViewController.swift */; };
+		E6E4D38FA871291A8CE9A553 /* Pods_SmartSeating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62788DA4000B4A66427EBCF /* Pods_SmartSeating.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		3553F47F2254BCD90044BE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3553F4822254BCD90044BE94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3553F4842254BCD90044BE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3553F48C2254D9630044BE94 /* YourSeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourSeatViewController.swift; sourceTree = "<group>"; };
+		3553F48E2254DD6C0044BE94 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		3553F4902254F17D0044BE94 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		7A46BF926E2845DE4A9A8961 /* Pods-SmartSeating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSeating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSeating/Pods-SmartSeating.debug.xcconfig"; sourceTree = "<group>"; };
+		C5E796134F84716BF72823E2 /* Pods-SmartSeating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSeating.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSeating/Pods-SmartSeating.release.xcconfig"; sourceTree = "<group>"; };
+		D62788DA4000B4A66427EBCF /* Pods_SmartSeating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartSeating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E4D38FA871291A8CE9A553 /* Pods_SmartSeating.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19CEAB8FF709922436C8DDD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D62788DA4000B4A66427EBCF /* Pods_SmartSeating.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3553F46C2254BCD70044BE94 = {
 			isa = PBXGroup;
 			children = (
 				3553F4772254BCD70044BE94 /* SmartSeating */,
 				3553F4762254BCD70044BE94 /* Products */,
+				DBBC406785D09AFEC64D06F9 /* Pods */,
+				19CEAB8FF709922436C8DDD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +76,25 @@
 			isa = PBXGroup;
 			children = (
 				3553F4782254BCD70044BE94 /* AppDelegate.swift */,
-				3553F47A2254BCD70044BE94 /* ViewController.swift */,
-				3553F47C2254BCD70044BE94 /* Main.storyboard */,
 				3553F47F2254BCD90044BE94 /* Assets.xcassets */,
-				3553F4812254BCD90044BE94 /* LaunchScreen.storyboard */,
 				3553F4842254BCD90044BE94 /* Info.plist */,
+				3553F4902254F17D0044BE94 /* InterestsViewController.swift */,
+				3553F4812254BCD90044BE94 /* LaunchScreen.storyboard */,
+				3553F47C2254BCD70044BE94 /* Main.storyboard */,
+				3553F48E2254DD6C0044BE94 /* SplashScreenViewController.swift */,
+				3553F47A2254BCD70044BE94 /* ViewController.swift */,
+				3553F48C2254D9630044BE94 /* YourSeatViewController.swift */,
 			);
 			path = SmartSeating;
+			sourceTree = "<group>";
+		};
+		DBBC406785D09AFEC64D06F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A46BF926E2845DE4A9A8961 /* Pods-SmartSeating.debug.xcconfig */,
+				C5E796134F84716BF72823E2 /* Pods-SmartSeating.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3553F4872254BCD90044BE94 /* Build configuration list for PBXNativeTarget "SmartSeating" */;
 			buildPhases = (
+				228820CCA54F6463035BC289 /* [CP] Check Pods Manifest.lock */,
 				3553F4712254BCD70044BE94 /* Sources */,
 				3553F4722254BCD70044BE94 /* Frameworks */,
 				3553F4732254BCD70044BE94 /* Resources */,
+				6C5A03AB6969A94C2591BD87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +165,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		228820CCA54F6463035BC289 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartSeating-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C5A03AB6969A94C2591BD87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartSeating/Pods-SmartSeating-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/Gradients/Gradients.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gradients.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartSeating/Pods-SmartSeating-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3553F4712254BCD70044BE94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +225,9 @@
 			files = (
 				3553F47B2254BCD70044BE94 /* ViewController.swift in Sources */,
 				3553F4792254BCD70044BE94 /* AppDelegate.swift in Sources */,
+				3553F48F2254DD6C0044BE94 /* SplashScreenViewController.swift in Sources */,
+				3553F48D2254D9630044BE94 /* YourSeatViewController.swift in Sources */,
+				3553F4912254F17D0044BE94 /* InterestsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +371,7 @@
 		};
 		3553F4882254BCD90044BE94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A46BF926E2845DE4A9A8961 /* Pods-SmartSeating.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +389,7 @@
 		};
 		3553F4892254BCDA0044BE94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E796134F84716BF72823E2 /* Pods-SmartSeating.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

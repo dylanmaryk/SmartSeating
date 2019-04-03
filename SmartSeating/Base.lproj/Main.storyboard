@@ -1,24 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6SI-IQ-ETE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Area-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartSeating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8F-Y8-JQ9">
+                                <rect key="frame" x="27" y="806" width="360" height="56"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.93333333333333335" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="IIp-vd-hgt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="S0H-Dr-UGW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="NETWORK AREA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Pn-pO-PcZ" kind="show" id="1KU-dB-2ES"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UM5-rf-bf6">
+                                <rect key="frame" x="27" y="728" width="360" height="56"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.2627450980392157" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="0nL-Y5-idd"/>
+                                    <constraint firstAttribute="height" constant="56" id="neW-7i-pF6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="DEDICATED SEAT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UM5-rf-bf6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qQ-zm-1ss"/>
+                            <constraint firstItem="F8F-Y8-JQ9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MIc-hF-Hff"/>
+                            <constraint firstItem="F8F-Y8-JQ9" firstAttribute="top" secondItem="UM5-rf-bf6" secondAttribute="bottom" constant="22" id="Z0D-sk-CnE"/>
+                            <constraint firstItem="F8F-Y8-JQ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0g-Lm-f0g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Area" prompt="Choose your seating area" id="z75-Se-tap"/>
+                    <connections>
+                        <outlet property="dedicatedSeatButton" destination="UM5-rf-bf6" id="z3n-0L-tOQ"/>
+                        <outlet property="networkAreaButton" destination="F8F-Y8-JQ9" id="4HZ-9f-d0F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1492.753623188406" y="131.91964285714286"/>
+        </scene>
+        <!--Your seat-->
+        <scene sceneID="bVA-m1-FTR">
+            <objects>
+                <viewController title="Your seat" id="7Hx-Rw-GTI" customClass="YourSeatViewController" customModule="SmartSeating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6K-M3-C6r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mV-tc-c08">
+                                <rect key="frame" x="160.5" y="118" width="93" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1Qa-7L-hjV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="hbR-Ve-c1v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6z-Kh-RQW">
+                                <rect key="frame" x="27" y="806" width="360" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="C3T-dh-gSM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="sBs-Ke-ALJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="GET YOUR TICKET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4mV-tc-c08" firstAttribute="top" secondItem="9gL-wf-DjI" secondAttribute="top" constant="30" id="1s7-J0-SnC"/>
+                            <constraint firstItem="k6z-Kh-RQW" firstAttribute="bottom" secondItem="9gL-wf-DjI" secondAttribute="bottom" id="M6q-te-w2h"/>
+                            <constraint firstItem="k6z-Kh-RQW" firstAttribute="centerX" secondItem="i6K-M3-C6r" secondAttribute="centerX" id="tpe-ar-bbl"/>
+                            <constraint firstItem="4mV-tc-c08" firstAttribute="centerX" secondItem="i6K-M3-C6r" secondAttribute="centerX" id="uii-QH-3PG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9gL-wf-DjI"/>
+                    </view>
+                    <connections>
+                        <outlet property="getYourTicketButton" destination="k6z-Kh-RQW" id="x6E-Rg-2Px"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrz-Lz-1HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2967" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8aI-qT-MmI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jgw-Tl-Zhb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LVp-AM-4EW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8NY-zG-uOl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGK-9O-5vJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="132"/>
+        </scene>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="mlJ-ry-sJE">
+            <objects>
+                <viewController id="6SI-IQ-ETE" customClass="SplashScreenViewController" customModule="SmartSeating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fap-Ot-ugS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RhO-0G-dAd">
+                                <rect key="frame" x="77" y="318" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="nSP-BX-1Dr"/>
+                                    <constraint firstAttribute="width" constant="260" id="sLH-1d-BiX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLYMATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPr-ft-GWh">
+                                <rect key="frame" x="141.5" y="430" width="131" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.12941176470588234" green="0.2627450980392157" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RhO-0G-dAd" firstAttribute="centerX" secondItem="Fap-Ot-ugS" secondAttribute="centerX" id="9kt-bT-289"/>
+                            <constraint firstItem="RhO-0G-dAd" firstAttribute="centerY" secondItem="Fap-Ot-ugS" secondAttribute="centerY" id="lBc-Pz-noA"/>
+                            <constraint firstItem="KPr-ft-GWh" firstAttribute="centerY" secondItem="Fap-Ot-ugS" secondAttribute="centerY" id="n1s-lC-Yae"/>
+                            <constraint firstItem="KPr-ft-GWh" firstAttribute="centerX" secondItem="Fap-Ot-ugS" secondAttribute="centerX" id="tcq-6C-VCO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qvj-w3-MjX"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="RhO-0G-dAd" id="BLA-aO-lvg"/>
+                        <segue destination="Jgw-Tl-Zhb" kind="show" identifier="viewController" animates="NO" id="D0x-Xe-YIl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmi-6d-1Y4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364" y="132"/>
+        </scene>
+        <!--Interests-->
+        <scene sceneID="pEe-iI-S33">
+            <objects>
+                <viewController title="Interests" id="9Pn-pO-PcZ" customClass="InterestsViewController" customModule="SmartSeating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MFS-5b-d9z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B33-gb-pft"/>
+                    </view>
+                    <connections>
+                        <segue destination="7Hx-Rw-GTI" kind="show" identifier="yourSeatViewController" id="KKi-kj-tQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wS-AX-ko2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2213" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="260" height="271"/>
+    </resources>
 </document>

@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.8.1)
+  - DropDown (2.3.12)
+  - Gradients (0.2.2)
+  - PromiseKit (6.8.3):
+    - PromiseKit/CorePromise (= 6.8.3)
+    - PromiseKit/Foundation (= 6.8.3)
+    - PromiseKit/UIKit (= 6.8.3)
+  - PromiseKit/Alamofire (6.8.3):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.8.3)
+  - PromiseKit/Foundation (6.8.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.8.3):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - Alamofire
+  - DropDown
+  - Gradients
+  - PromiseKit
+  - PromiseKit/Alamofire
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DropDown
+    - Gradients
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
+  Gradients: 9c94ae3dfda450f1ccbb38126dde5f5b9736043c
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
+
+PODFILE CHECKSUM: 08d4b5f8b04bbb2ccf9ab5c2da249f2253be24d4
+
+COCOAPODS: 1.5.3
