@@ -9,6 +9,8 @@
 import Alamofire
 import DropDown
 import PromiseKit
+import RxGesture
+import RxSwift
 import UIKit
 
 struct InterestsRequest: Encodable {
@@ -27,13 +29,82 @@ struct Neighbor: Decodable {
 
 class InterestsViewController: UIViewController {
     
-    private var interestsResponse: InterestsResponse?
+    @IBOutlet weak var interest1Label: UILabel! {
+        didSet {
+            interest1Label.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
+                self.dropDown.anchorView = self.interest1Label
+                self.dropDown.show()
+                self.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                    self.interest1Label.textColor = .black
+                    self.interest1Label.text = item
+                    self.interest2Label.isHidden = false
+                    self.interest2Divider.isHidden = false
+                    self.dropDown.anchorView = self.interest2Label
+                }
+            }).disposed(by: disposeBag)
+        }
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var interest2Label: UILabel! {
+        didSet {
+            interest2Label.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
+                self.dropDown.anchorView = self.interest2Label
+                self.dropDown.show()
+                self.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                    self.interest2Label.textColor = .black
+                    self.interest2Label.text = item
+                    self.interest3Label.isHidden = false
+                    self.interest3Divider.isHidden = false
+                    self.dropDown.anchorView = self.interest3Label
+                }
+            }).disposed(by: disposeBag)
+        }
+    }
+    
+    @IBOutlet weak var interest3Label: UILabel! {
+        didSet {
+            interest3Label.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
+                self.dropDown.anchorView = self.interest3Label
+                self.dropDown.show()
+                self.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                    self.interest3Label.textColor = .black
+                    self.interest3Label.text = item
+                    self.interest4Label.isHidden = false
+                    self.interest4Divider.isHidden = false
+                    self.dropDown.anchorView = self.interest4Label
+                }
+            }).disposed(by: disposeBag)
+        }
+    }
+    
+    @IBOutlet weak var interest4Label: UILabel!
+    
+    @IBOutlet weak var interest1Divider: UIView!
+    @IBOutlet weak var interest2Divider: UIView!
+    @IBOutlet weak var interest3Divider: UIView!
+    @IBOutlet weak var interest4Divider: UIView!
+    
+    @IBOutlet weak var doneButton: UIButton! {
+        didSet {
+            doneButton.rx.tapGesture().when(.recognized).subscribe(onNext: { [unowned self] _ in
+                self.request()
+            }).disposed(by: disposeBag)
+        }
+    }
+    
+    private let dropDown: DropDown = {
         let dropDown = DropDown()
         dropDown.dataSource = ["cats", "dogs", "skiing", "cooking", "football", "Marvel comics", "Game of Thrones"]
-        let interestsRequest = InterestsRequest(interests: ["football", "ancient history"])
+        return dropDown
+    }()
+    private let disposeBag = DisposeBag()
+    
+    private var interestsResponse: InterestsResponse?
+    
+    private func request() {
+        let interestsRequest = InterestsRequest(interests: [interest1Label.text!,
+                                                            interest2Label.text!,
+                                                            interest3Label.text!])
         let interestsRequestDict = try! JSONDecoder().decode([String : [String]].self,
                                                              from: try! JSONEncoder().encode(interestsRequest))
         firstly {
