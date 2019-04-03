@@ -227,6 +227,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others on your flight like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0S-GM-du3">
+                                <rect key="frame" x="20" y="575" width="236" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="define an interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHd-1T-qzm">
                                 <rect key="frame" x="20" y="381" width="150" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -277,14 +283,27 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uee-Q8-uPy">
+                                <rect key="frame" x="20" y="607" width="374" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">#alps
+#backpacking
+#cats
+#climbing
+#surfing</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HuC-43-hnW" firstAttribute="top" secondItem="cqa-bf-3du" secondAttribute="bottom" constant="48" id="2PT-9g-qll"/>
                             <constraint firstItem="cqa-bf-3du" firstAttribute="centerX" secondItem="MFS-5b-d9z" secondAttribute="centerX" id="3KB-sC-Gdk"/>
+                            <constraint firstItem="R0S-GM-du3" firstAttribute="leading" secondItem="dzG-MS-QHv" secondAttribute="leading" id="4hL-fP-E8a"/>
                             <constraint firstItem="7Re-1M-zD0" firstAttribute="top" secondItem="QsQ-F0-CSM" secondAttribute="bottom" constant="8" symbolic="YES" id="7eh-Kx-hxx"/>
                             <constraint firstItem="dzG-MS-QHv" firstAttribute="top" secondItem="kR7-ky-JZ4" secondAttribute="bottom" constant="8" symbolic="YES" id="7kS-Eo-lx1"/>
                             <constraint firstItem="kR7-ky-JZ4" firstAttribute="top" secondItem="7Re-1M-zD0" secondAttribute="bottom" constant="8" symbolic="YES" id="9dH-xa-VN9"/>
+                            <constraint firstItem="R0S-GM-du3" firstAttribute="leading" secondItem="uee-Q8-uPy" secondAttribute="leading" id="ALg-JE-YlY"/>
                             <constraint firstItem="B33-gb-pft" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KJj-07-NpH" secondAttribute="trailing" symbolic="YES" id="GQs-1S-aVA"/>
                             <constraint firstItem="SwR-XZ-9je" firstAttribute="trailing" secondItem="QhJ-Fn-A3F" secondAttribute="trailing" id="Gj0-kU-pMD"/>
                             <constraint firstItem="QsQ-F0-CSM" firstAttribute="leading" secondItem="7Re-1M-zD0" secondAttribute="leading" id="Gzg-3U-Tpu"/>
@@ -295,6 +314,7 @@
                             <constraint firstItem="dzG-MS-QHv" firstAttribute="top" secondItem="MFS-5b-d9z" secondAttribute="top" constant="536" id="Nep-ly-uJw"/>
                             <constraint firstItem="WHd-1T-qzm" firstAttribute="leading" secondItem="SwR-XZ-9je" secondAttribute="leading" id="OTr-Xs-cMc"/>
                             <constraint firstItem="cqa-bf-3du" firstAttribute="top" secondItem="B33-gb-pft" secondAttribute="top" constant="40" id="P58-KX-xfk"/>
+                            <constraint firstItem="R0S-GM-du3" firstAttribute="top" secondItem="dzG-MS-QHv" secondAttribute="bottom" constant="38" id="QER-cn-hwg"/>
                             <constraint firstItem="WHd-1T-qzm" firstAttribute="leading" secondItem="HuC-43-hnW" secondAttribute="leading" id="U2z-eH-ijD"/>
                             <constraint firstItem="SwR-XZ-9je" firstAttribute="top" secondItem="WHd-1T-qzm" secondAttribute="bottom" constant="8" symbolic="YES" id="US1-J2-KwK"/>
                             <constraint firstItem="WHd-1T-qzm" firstAttribute="top" secondItem="HuC-43-hnW" secondAttribute="bottom" constant="18" id="VuG-tX-2Iy"/>
@@ -303,11 +323,14 @@
                             <constraint firstItem="kR7-ky-JZ4" firstAttribute="leading" secondItem="dzG-MS-QHv" secondAttribute="leading" id="YJT-2Y-4QM"/>
                             <constraint firstItem="7Re-1M-zD0" firstAttribute="trailing" secondItem="dzG-MS-QHv" secondAttribute="trailing" id="Yjf-LG-nc0"/>
                             <constraint firstItem="qWl-gZ-dHV" firstAttribute="bottom" secondItem="B33-gb-pft" secondAttribute="bottom" id="aIK-Ov-ORj"/>
+                            <constraint firstItem="B33-gb-pft" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="R0S-GM-du3" secondAttribute="trailing" symbolic="YES" id="bJm-UJ-c8J"/>
                             <constraint firstItem="B33-gb-pft" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HuC-43-hnW" secondAttribute="trailing" symbolic="YES" id="d1R-5c-bjl"/>
                             <constraint firstItem="QsQ-F0-CSM" firstAttribute="top" secondItem="QhJ-Fn-A3F" secondAttribute="bottom" constant="8" symbolic="YES" id="f91-fZ-UaE"/>
                             <constraint firstItem="KJj-07-NpH" firstAttribute="leading" secondItem="QhJ-Fn-A3F" secondAttribute="leading" id="hJM-e2-yWZ"/>
+                            <constraint firstItem="uee-Q8-uPy" firstAttribute="trailing" secondItem="dzG-MS-QHv" secondAttribute="trailing" id="hlw-YT-dmR"/>
                             <constraint firstItem="KJj-07-NpH" firstAttribute="top" secondItem="SwR-XZ-9je" secondAttribute="bottom" constant="8" symbolic="YES" id="i8u-lJ-F5Y"/>
                             <constraint firstItem="B33-gb-pft" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WHd-1T-qzm" secondAttribute="trailing" symbolic="YES" id="iAS-9z-50Z"/>
+                            <constraint firstItem="qWl-gZ-dHV" firstAttribute="top" secondItem="uee-Q8-uPy" secondAttribute="bottom" constant="8" symbolic="YES" id="j9S-kl-hpR"/>
                             <constraint firstItem="QhJ-Fn-A3F" firstAttribute="trailing" secondItem="7Re-1M-zD0" secondAttribute="trailing" id="jlx-gB-Fbs"/>
                             <constraint firstItem="B33-gb-pft" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kR7-ky-JZ4" secondAttribute="trailing" symbolic="YES" id="kDz-8Z-J6j"/>
                             <constraint firstItem="B33-gb-pft" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QsQ-F0-CSM" secondAttribute="trailing" symbolic="YES" id="ktK-IM-TNd"/>
@@ -315,6 +338,7 @@
                             <constraint firstItem="B33-gb-pft" firstAttribute="bottom" secondItem="dzG-MS-QHv" secondAttribute="bottom" constant="325" id="okF-9E-B2Q"/>
                             <constraint firstItem="SwR-XZ-9je" firstAttribute="leading" secondItem="KJj-07-NpH" secondAttribute="leading" id="tIp-kw-ecc"/>
                             <constraint firstItem="SwR-XZ-9je" firstAttribute="centerX" secondItem="cqa-bf-3du" secondAttribute="centerX" id="uCW-9y-FwB"/>
+                            <constraint firstItem="uee-Q8-uPy" firstAttribute="top" secondItem="R0S-GM-du3" secondAttribute="bottom" constant="8" symbolic="YES" id="vXC-iX-V3v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B33-gb-pft"/>
                     </view>
