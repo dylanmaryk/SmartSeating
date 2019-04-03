@@ -94,7 +94,34 @@ class InterestsViewController: UIViewController {
     
     private let dropDown: DropDown = {
         let dropDown = DropDown()
-        dropDown.dataSource = ["cats", "dogs", "skiing", "cooking", "football", "Marvel comics", "Game of Thrones"]
+        dropDown.dataSource = ["football",
+                               "ancient history",
+                               "arts",
+                               "Rust",
+                               "tourism",
+                               "books",
+                               "numismatics",
+                               "computer science",
+                               "mathematics",
+                               "basketball",
+                               "tennis",
+                               "tv shows",
+                               "series",
+                               "movies",
+                               "chess",
+                               "video games",
+                               "strikeball",
+                               "theatre",
+                               "gardening",
+                               "body building",
+                               "business",
+                               "cynology",
+                               "veganism",
+                               "HLS",
+                               "sports ing general",
+                               "cooking",
+                               "volonteerism"]
+        dropDown.direction = .bottom
         return dropDown
     }()
     private let disposeBag = DisposeBag()
