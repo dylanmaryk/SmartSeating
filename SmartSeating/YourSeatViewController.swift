@@ -58,37 +58,37 @@ class YourSeatViewController: UIViewController {
         if interestsResponse.neighbors.indices.contains(0) {
             neighbor1Label.text = interestsResponse?.neighbors[0].assignedSeat ?? ""
             if interestsResponse.neighbors[0].interests.indices.contains(0) {
-                neighbor1Interest1Label.text = interestsResponse.neighbors[0].interests[0]
+                neighbor1Interest1Label.text = "#" + interestsResponse.neighbors[0].interests[0]
             }
             if interestsResponse.neighbors[0].interests.indices.contains(1) {
-                neighbor1Interest2Label.text = interestsResponse.neighbors[0].interests[1]
+                neighbor1Interest2Label.text = "#" + interestsResponse.neighbors[0].interests[1]
             }
             if interestsResponse.neighbors[0].interests.indices.contains(2) {
-                neighbor1Interest3Label.text = interestsResponse.neighbors[0].interests[2]
+                neighbor1Interest3Label.text = "#" + interestsResponse.neighbors[0].interests[2]
             }
             if interestsResponse.neighbors[0].interests.indices.contains(3) {
-                neighbor1Interest4Label.text = interestsResponse.neighbors[0].interests[3]
+                neighbor1Interest4Label.text = "#" + interestsResponse.neighbors[0].interests[3]
             }
             if interestsResponse.neighbors[0].interests.indices.contains(4) {
-                neighbor1Interest5Label.text = interestsResponse.neighbors[0].interests[4]
+                neighbor1Interest5Label.text = "#" + interestsResponse.neighbors[0].interests[4]
             }
         }
         if interestsResponse.neighbors.indices.contains(1) {
             neighbor2Label.text = interestsResponse.neighbors[1].assignedSeat
             if interestsResponse.neighbors[1].interests.indices.contains(0) {
-                neighbor2Interest1Label.text = interestsResponse.neighbors[1].interests[0]
+                neighbor2Interest1Label.text = "#" + interestsResponse.neighbors[1].interests[0]
             }
             if interestsResponse.neighbors[1].interests.indices.contains(1) {
-                neighbor2Interest2Label.text = interestsResponse.neighbors[1].interests[1]
+                neighbor2Interest2Label.text = "#" + interestsResponse.neighbors[1].interests[1]
             }
             if interestsResponse.neighbors[1].interests.indices.contains(2) {
-                neighbor2Interest3Label.text = interestsResponse.neighbors[1].interests[2]
+                neighbor2Interest3Label.text = "#" + interestsResponse.neighbors[1].interests[2]
             }
             if interestsResponse.neighbors[1].interests.indices.contains(3) {
-                neighbor2Interest4Label.text = interestsResponse.neighbors[1].interests[3]
+                neighbor2Interest4Label.text = "#" + interestsResponse.neighbors[1].interests[3]
             }
             if interestsResponse.neighbors[1].interests.indices.contains(4) {
-                neighbor2Interest5Label.text = interestsResponse.neighbors[1].interests[4]
+                neighbor2Interest5Label.text = "#" + interestsResponse.neighbors[1].interests[4]
             }
         }
     }
